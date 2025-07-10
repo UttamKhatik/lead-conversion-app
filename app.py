@@ -28,22 +28,22 @@ def preprocess_and_predict(input_df):
     return preds
 
 
-# --- SINGLE INPUT FORM (Simplified) ---
-with st.expander("📋 Predict One Lead (Simple)"):
-    st.markdown("Enter key info for the lead:")
+# # --- SINGLE INPUT FORM (Simplified) ---
+# with st.expander("📋 Predict One Lead (Simple)"):
+#     st.markdown("Enter key info for the lead:")
 
-    total_time = st.number_input("🕒 Total Time Spent on Website", min_value=0, help="Time (in seconds) the user spent on your website")
-    total_visits = st.number_input("🔁 Total Visits", min_value=0, help="How many times this lead has visited")
-    page_views = st.number_input("📄 Page Views Per Visit", min_value=0, help="Average number of pages viewed per visit")
+#     total_time = st.number_input("🕒 Total Time Spent on Website", min_value=0, help="Time (in seconds) the user spent on your website")
+#     total_visits = st.number_input("🔁 Total Visits", min_value=0, help="How many times this lead has visited")
+#     page_views = st.number_input("📄 Page Views Per Visit", min_value=0, help="Average number of pages viewed per visit")
     
-    tags = st.selectbox("🏷️ Tags", ['Interested in course', 'Ringing', 'Will revert after reading email', 'Lost to EINS', 'Other'])
-    lead_source = st.selectbox("🌐 Lead Source", ['Google', 'Direct Traffic', 'Reference', 'Social Media', 'Other'])
-    last_activity = st.selectbox("⚡ Last Activity", ['Email Opened', 'Page Visited on Website', 'Form Submitted', 'Olark Chat Conversation', 'Other'])
-    specialization = st.selectbox("🎓 Specialization", ['Finance', 'IT', 'Marketing', 'HR', 'Operations', 'Other'])
+#     tags = st.selectbox("🏷️ Tags", ['Interested in course', 'Ringing', 'Will revert after reading email', 'Lost to EINS', 'Other'])
+#     lead_source = st.selectbox("🌐 Lead Source", ['Google', 'Direct Traffic', 'Reference', 'Social Media', 'Other'])
+#     last_activity = st.selectbox("⚡ Last Activity", ['Email Opened', 'Page Visited on Website', 'Form Submitted', 'Olark Chat Conversation', 'Other'])
+#     specialization = st.selectbox("🎓 Specialization", ['Finance', 'IT', 'Marketing', 'HR', 'Operations', 'Other'])
 
-    # Create dummy input
-    simple_input = pd.DataFrame(columns=model_columns)
-    simple_input.loc[0] = [0]*len(model_columns)# app.py
+#     # Create dummy input
+#     simple_input = pd.DataFrame(columns=model_columns)
+#     simple_input.loc[0] = [0]*len(model_columns)# app.py
 import streamlit as st
 import pandas as pd
 import joblib
