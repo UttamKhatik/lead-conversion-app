@@ -5,7 +5,9 @@ import joblib
 import numpy as np
 
 # Load model and preprocessors
-model = joblib.load("model/best_random_forest.pkl")
+# NEW (correct)
+model = joblib.load("model/best_random_forest_model.pkl")
+
 scaler = joblib.load("model/scaler.pkl")
 model_columns = joblib.load("model/model_columns.pkl")
 
