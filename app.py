@@ -575,14 +575,14 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-    # Set only selected values
-simple_input.at[0, 'Total Time Spent on Website'] = total_time
-simple_input.at[0, 'TotalVisits'] = total_visits
-simple_input.at[0, 'Page Views Per Visit'] = page_views
-simple_input.at[0, f'Tags_{tags}'] = 1
-simple_input.at[0, f'Lead Source_{lead_source}'] = 1
-simple_input.at[0, f'Last Activity_{last_activity}'] = 1
-simple_input.at[0, f'Specialization_{specialization}'] = 1
+#     # Set only selected values
+# simple_input.at[0, 'Total Time Spent on Website'] = total_time
+# simple_input.at[0, 'TotalVisits'] = total_visits
+# simple_input.at[0, 'Page Views Per Visit'] = page_views
+# simple_input.at[0, f'Tags_{tags}'] = 1
+# simple_input.at[0, f'Lead Source_{lead_source}'] = 1
+# simple_input.at[0, f'Last Activity_{last_activity}'] = 1
+# simple_input.at[0, f'Specialization_{specialization}'] = 1
 
 if st.button("🎯 Predict Now"):
         pred = preprocess_and_predict(simple_input)[0]
