@@ -3,6 +3,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
+import os
+print("Files in model folder:", os.listdir("model"))  # 👈 debug line
+
+model = joblib.load("model/best_random_forest_model.pkl")
 
 # Load model and preprocessors
 # NEW (correct)
