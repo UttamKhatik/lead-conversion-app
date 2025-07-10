@@ -4,14 +4,11 @@ import pandas as pd
 import joblib
 import numpy as np
 import os
-print("Files in model folder:", os.listdir("model"))  # 👈 debug line
 
-model = joblib.load("model/best_random_forest_model.pkl")
 
 # Load model and preprocessors
 # NEW (correct)
 model = joblib.load("model/best_random_forest_model.pkl")
-
 scaler = joblib.load("model/scaler.pkl")
 model_columns = joblib.load("model/model_columns.pkl")
 
@@ -28,22 +25,6 @@ def preprocess_and_predict(input_df):
     return preds
 
 
-# # --- SINGLE INPUT FORM (Simplified) ---
-# with st.expander("📋 Predict One Lead (Simple)"):
-#     st.markdown("Enter key info for the lead:")
-
-#     total_time = st.number_input("🕒 Total Time Spent on Website", min_value=0, help="Time (in seconds) the user spent on your website")
-#     total_visits = st.number_input("🔁 Total Visits", min_value=0, help="How many times this lead has visited")
-#     page_views = st.number_input("📄 Page Views Per Visit", min_value=0, help="Average number of pages viewed per visit")
-    
-#     tags = st.selectbox("🏷️ Tags", ['Interested in course', 'Ringing', 'Will revert after reading email', 'Lost to EINS', 'Other'])
-#     lead_source = st.selectbox("🌐 Lead Source", ['Google', 'Direct Traffic', 'Reference', 'Social Media', 'Other'])
-#     last_activity = st.selectbox("⚡ Last Activity", ['Email Opened', 'Page Visited on Website', 'Form Submitted', 'Olark Chat Conversation', 'Other'])
-#     specialization = st.selectbox("🎓 Specialization", ['Finance', 'IT', 'Marketing', 'HR', 'Operations', 'Other'])
-
-#     # Create dummy input
-#     simple_input = pd.DataFrame(columns=model_columns)
-#     simple_input.loc[0] = [0]*len(model_columns)# app.py
 import streamlit as st
 import pandas as pd
 import joblib
@@ -109,7 +90,7 @@ st.markdown("""
 @st.cache_resource
 def load_models():
     try:
-        model = joblib.load("model/best_random_forest.pkl")
+        model = joblib.load("model/best_random_forest_model.pkl")
         scaler = joblib.load("model/scaler.pkl")
         model_columns = joblib.load("model/model_columns.pkl")
         return model, scaler, model_columns
