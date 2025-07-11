@@ -176,13 +176,6 @@ if page == "🏠 Dashboard":
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        # st.markdown("""
-        # <div class="metric-card">
-        #     <h3>📈 Total Predictions</h3>
-        #     <h2>1,247</h2>
-        #     <p>+15% from last month</p>
-        # </div>
-        # """, unsafe_allow_html=True)
         st.markdown("""
         <div class="metric-card">
         <h3 style="color:#ff6347;">📈 Total Predictions</h3>
@@ -195,27 +188,41 @@ if page == "🏠 Dashboard":
     with col2:
         st.markdown("""
         <div class="metric-card">
-            <h3>✅ Conversion Rate</h3>
-            <h2>68.2%</h2>
-            <p>+3.2% from last month</p>
+        <h3 style="color:#ff6347;">✅ Conversion Rate</h3>
+        <h2 style="color:#1e90ff;">68.2%</h2>
+        <p style="color:#228b22;">+3.2% from last month</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col3:
+        # st.markdown("""
+        # <div class="metric-card">
+        #     <h3>🎯 Model Accuracy</h3>
+        #     <h2>92.5%</h2>
+        #     <p>Validated on test data</p>
+        # </div>
+        # """, unsafe_allow_html=True)
         st.markdown("""
         <div class="metric-card">
-            <h3>🎯 Model Accuracy</h3>
-            <h2>92.5%</h2>
-            <p>Validated on test data</p>
+        <h3 style="color:#ff6347;">🎯 Model Accuracy</h3>
+        <h2 style="color:#1e90ff;">94.5%</h2>
+        <p style="color:#228b22;">Validated on test data</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col4:
+        # st.markdown("""
+        # <div class="metric-card">
+        #     <h3>⚡ Avg Response Time</h3>
+        #     <h2>0.12s</h2>
+        #     <p>Real-time predictions</p>
+        # </div>
+        # """, unsafe_allow_html=True)
         st.markdown("""
         <div class="metric-card">
-            <h3>⚡ Avg Response Time</h3>
-            <h2>0.12s</h2>
-            <p>Real-time predictions</p>
+        <h3 style="color:#ff6347;">⚡ Avg Response Time</h3>
+        <h2 style="color:#1e90ff;">0.12s</h2>
+        <p style="color:#228b22;">Real-time predictions</p>
         </div>
         """, unsafe_allow_html=True)
     
