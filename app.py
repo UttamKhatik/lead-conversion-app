@@ -176,13 +176,21 @@ if page == "🏠 Dashboard":
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
+        # st.markdown("""
+        # <div class="metric-card">
+        #     <h3>📈 Total Predictions</h3>
+        #     <h2>1,247</h2>
+        #     <p>+15% from last month</p>
+        # </div>
+        # """, unsafe_allow_html=True)
         st.markdown("""
         <div class="metric-card">
-            <h3>📈 Total Predictions</h3>
-            <h2>1,247</h2>
-            <p>+15% from last month</p>
+        <h3 style="color:#ff6347;">📈 Total Predictions</h3>
+        <h2 style="color:#1e90ff;">1,247</h2>
+        <p style="color:#228b22;">+15% from last month</p>
         </div>
         """, unsafe_allow_html=True)
+
     
     with col2:
         st.markdown("""
